@@ -35,6 +35,7 @@ public class TestNacosConfigController {
 
     /**
      * 从上下文中读取配置
+     * 通过网关访问http://127.0.0.1:9000/provider/test?token=1
      */
     @GetMapping(value = "/test")
     public String test() {

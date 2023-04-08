@@ -23,6 +23,10 @@ public class ConsumerController {
     @Value("${spring.application.name}")
     private String appName;
 
+    /**
+     * http://127.0.0.1:9000/consumer/echo/app/name?token=1
+     * @return
+     */
     @GetMapping(value = "/echo/app/name")
     public String echo() {
         //使用 LoadBalanceClient 和 RestTemplate 结合的方式来访问
